@@ -171,7 +171,7 @@ namespace Opm
                 const std::pair<CI,CI>
                     m = std::minmax_element(reg.begin(), reg.end());
 
-                low  = *m.first;
+                low  = 0;
 
                 const typename Region::size_type
                     n = *m.second - low + 1;

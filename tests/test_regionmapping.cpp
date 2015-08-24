@@ -49,8 +49,8 @@ BOOST_AUTO_TEST_CASE (RegionMapping)
     for (size_t i = 0; i < regions.size(); ++i) {
         BOOST_CHECK_EQUAL(rm.region(i), regions[i]);
     }
-    std::vector<int> region_ids = { 2, 3, 4, 5, 6, 7 };
-    std::vector< std::vector<int> > region_cells = {  { 0, 2, 4 },  { 7 },  { 3 },  { 1 },  { 6, 8 },  { 5 }  };
+    std::vector<int> region_ids = { 0, 1, 2, 3, 4, 5, 6, 7 };
+    std::vector< std::vector<int> > region_cells = {  {},  {},  { 0, 2, 4 },  { 7 },  { 3 },  { 1 },  { 6, 8 },  { 5 }  };
     BOOST_REQUIRE_EQUAL(rm.numRegions(), region_ids.size());
     for (size_t i = 0; i < region_ids.size(); ++i) {
         auto cells = rm.cells(region_ids[i]);

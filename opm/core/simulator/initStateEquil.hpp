@@ -404,6 +404,8 @@ namespace Opm
                          r < nr; ++r)
                     {
                         const typename RMap::CellRange cells = reg.cells(r);
+                        if (cells.size() == 0)
+                            continue;
 
                         const int repcell = *cells.begin();
                         const RhoCalc calc(props, repcell);
